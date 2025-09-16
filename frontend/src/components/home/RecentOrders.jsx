@@ -7,7 +7,7 @@ const RecentOrders = () => {
       <div className="bg-[#1a1a1a] w-full h-[450px] rounded-lg">
         {/* {RECENT ORDERS HEADER} */}
         <div className="flex justify-between items-center px-6 py-4">
-          <h1 className="text-[#f5f5f5] text-lg font-semibold">
+          <h1 className="text-[#f5f5f5] text-lg font-semibold tracking-wide">
             Recent Orders
           </h1>
           <a href="" className="text-[#025cca] text-sm font-semibold">
@@ -24,7 +24,13 @@ const RecentOrders = () => {
           />
         </div>
         {/* {ORDER LIST} */}
-        <div>
+        <div className="mt-4 px-6 overflow-y-scroll h-[300px] scrollbar-hide">
+             <OrderList/>
+             <OrderList/>
+             <OrderList/>
+             <OrderList/>
+             <OrderList/>
+             <OrderList/>
              <OrderList/>
         </div>
        
