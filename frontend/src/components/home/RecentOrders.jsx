@@ -4,7 +4,7 @@ import OrderList from "./OrderList";
 const RecentOrders = () => {
   return (
     <div className="px-8 mt-6">
-      <div className="bg-[#1a1a1a] w-full h-[450px] rounded-lg">
+      <div className="bg-[#1a1a1a] w-full h-[650px] rounded-lg">
         {/* {RECENT ORDERS HEADER} */}
         <div className="flex justify-between items-center px-6 py-4">
           <h1 className="text-[#f5f5f5] text-lg font-semibold tracking-wide">
@@ -32,6 +32,10 @@ const RecentOrders = () => {
              <OrderList/>
              <OrderList/>
              <OrderList/>
+             <OrderList/>
+             <OrderList/>
+             <OrderList/>
+             
         </div>
        
       </div>

@@ -9,7 +9,7 @@ import PopularDishes from "../components/home/PopularDishes";
 
 const Home = () => {
   return (
-    <section className="bg-[#1f1f1f] h-[calc(100vh-5rem)] overflow-hidden flex">
+    <section className="bg-[#1f1f1f] h-[calc(100vh-5rem)] overflow-hidden flex overflow-y-scroll scrollbar-hide">
       {/* {LEFT DIV} */}
       <div className="flex-[3] ">
         <Greetings />
