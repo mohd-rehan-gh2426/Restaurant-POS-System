@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { menus } from "../../constants";
 import { getRandomBG } from "../../utils/randomColor";
 import { GrRadialSelected } from "react-icons/gr";
+import { FaShoppingCart } from "react-icons/fa";
 
 const MenuContainer = () => {
   const [selected, setSelected] = useState(menus[0]);
@@ -68,10 +69,14 @@ const MenuContainer = () => {
               key={item.id}
               className="flex flex-col items-start justify-between p-4 rounded-lg h-[130px] cursor-pointer bg-[#1a1a1a] hover:bg-[#2a2a2a]"
             >
-              <h1 className="text-[#f5f5f5] text-lg font-semibold">
+            <div className="flex items-start justify-between w-full">
+            <h1 className="text-[#f5f5f5] text-lg font-semibold">
                 {" "}
                 {item.name}
               </h1>
+                <button className="bg-[#2e2a40] text-[#02ca3a] p-2 rounded-lg"><FaShoppingCart /></button>
+            </div>
+              
               <div className="flex items-center justify-between w-full">
                 <p className="text-[#f5f5f5] text-xl font-bold">
                   ₹{item.price}
