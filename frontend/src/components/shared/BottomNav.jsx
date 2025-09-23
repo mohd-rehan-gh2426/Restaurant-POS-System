@@ -88,9 +88,9 @@ const BottomNav = () => {
             Guest
           </label>
           <div className="flex items-center justify-between bg-[#1f1f1f] px-4 py-3 rounded-lg">
-            <button onClick={decrement} className="text-yellow-500 text-2xl">&minus;</button>
+            <button onClick={decrement} className="text-yellow-500 text-2xl cursor-pointer">&minus;</button>
             <span className="text-white">{guestCount} Persons</span>
-            <button onClick={increment} className="text-yellow-500 text-2xl">&#43;</button>
+            <button onClick={increment} className="text-yellow-500 text-2xl cursor-pointer">&#43;</button>
           </div>
         </div>
         <button onClick={() => navigate("/tables")} className="w-full bg-[#F6B100] text-[#f5f5f5] rounded-lg py-3 mt-8 hover:bg-yellow-700">Create Order</button>

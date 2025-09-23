@@ -37,14 +37,18 @@ const Tables = () => {
       </div>
 
       <div className=" flex flex-wrap gap-6 items-center justify-center px-16 py-4  h-[calc(100vh-5rem)] overflow-y-scroll scrollbar-hide">
-       {
-        tables.map((table) => {
-          return(
-            <TableCard key={table.id} name={table.name} status={table.status} initials={table.initial}/>
-          )
-        }) 
-       }
-       
+        {tables.map((table) => {
+          return (
+            <TableCard
+              key={table.id}
+              id={table.id}
+              name={table.name}
+              status={table.status}
+              initials={table.initial}
+              seats={table.seats}
+            />
+          );
+        })}
       </div>
 
       <BottomNav />
