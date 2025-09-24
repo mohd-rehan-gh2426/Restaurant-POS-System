@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-
+import { formatDate } from "../../utils/dateFormatter";
 const Greetings = () => {
   const [dateTime, setDateTime] = useState(new Date());
 
@@ -9,26 +9,7 @@ const Greetings = () => {
      return () => clearInterval(timer);
   }, []);
 
-  const formatDate = (date) => {
-    const months = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ];
-    return `${months[date.getMonth()]} ${String(date.getDate()).padStart(
-      2,
-      "0"
-    )}, ${date.getFullYear()}`;
-  };
+ 
 
   const formatTime = (date) =>
     `${String(date.getHours()).padStart(2, "0")}:${String(

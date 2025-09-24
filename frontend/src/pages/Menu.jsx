@@ -8,8 +8,11 @@ import MenuContainer from "../components/menu/MenuContainer";
 import CustomerInfo from "../components/menu/CustomerInfo";
 import CartItems from "../components/menu/CartItems";
 import BillsInfo from "../components/menu/BillsInfo";
+import { useSelector } from "react-redux";
+
 
 const Menu = () => {
+  const customerData = useSelector(state => state.customer)
   return (
     <section className="bg-[#1f1f1f]  h-[calc(100vh-5rem)] overflow-hidden overflow-y-scroll scrollbar-hide flex gap-3">
       {/* {LEFT DIV} */}
@@ -27,10 +30,10 @@ const Menu = () => {
                 <MdRestaurantMenu className="text-[#f5f5f5] text-4xl" />
                 <div className="flex flex-col items-start">
                   <h1 className="text-md text-[#f5f5f5] font-semibold">
-                    Customer Name
+                  {customerData. customerName || "Customer Name"}
                   </h1>
                   <p className="text-xs text-[#ababab] font-medium">
-                    Table No : 2
+                   {customerData.tableNo || "N/A"}
                   </p>
                 </div>
               </div>
@@ -43,7 +46,7 @@ const Menu = () => {
       {/* {RIGHT DIV} */}
       <div className="flex-[1] bg-[#1a1a1a] mt-4 mr-3 h-[780px] rounded-lg pt-2 overflow-y-scroll scrollbar-hide">
         {/* {COSTUMER INFO} */}
-        <CustomerInfo/>
+        <CustomerInfo name={customerData.customerName}/>
         <hr className="border-[#2a2a2a] border-t-2" />
         {/* {CART ITEMS} */}
         <CartItems/>
